@@ -13,7 +13,7 @@ const App = () =>{
     const classes = useStyles();
 
     return(
-        <Container maxWidth="lg">
+        <Container className={classes.body} maxWidth="lg">
             <AppBar className={classes.appBar} position="static" color="inherit">
                 <img className={classes.image} src={Bros} alt="Bros" width="15%" />
                 {/* <Typography variant="h2" align="center">A Social media web app</Typography> */}

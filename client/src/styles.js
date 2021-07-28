@@ -16,6 +16,6 @@ export default makeStyles(() => ({
         marginLeft: '15px',
       },
       body: {
-          color: 'black'
+          backgroundColor:'rgba(30,30,30,255)',
       },
 }));
