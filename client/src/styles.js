@@ -15,7 +15,4 @@ export default makeStyles(() => ({
       image: {
         marginLeft: '15px',
       },
-      body: {
-          backgroundColor:'rgba(30,30,30,255)',
-      },
 }));
