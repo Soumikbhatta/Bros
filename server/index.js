@@ -10,10 +10,10 @@ const app = express();
 app.use(express.json({limit: "30mb", extended: true}));
 app.use(express.urlencoded({limit: "30mb", extended: true}));
 app.use(cors());
-app.use('/posts', postRoutes);
+
 
 //https://www.mongodb.com/cloud/atlas
-
+app.use('/posts', postRoutes);
 const CONNECTION_URL ='mongodb+srv://soumik:soumik1712@cluster0.9ghrf.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
 const PORT = process.env.PORT || 5000;
 
