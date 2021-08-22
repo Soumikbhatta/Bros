@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Container, AppBar, Grow, Grid } from '@material-ui/core';
+import { useDispatch } from 'react-redux';
 //removed Typography for now
+
+import { getPosts } from './actions/posts';
 
 import Bros from './images/bros.png';
 
@@ -11,6 +14,11 @@ import useStyles from './styles';
 
 const App = () =>{
     const classes = useStyles();
+    const dispatch = useDispatch();
+
+    useEffect(()=>{
+        dispatch(getPosts());
+    },[dispatch]);
 
     return(
         <Container className={classes.body} maxWidth="lg">
