@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Container, AppBar, Grow, Grid } from '@material-ui/core';
 import { useDispatch } from 'react-redux';
 import { ThemeProvider, createTheme } from '@material-ui/core/styles';
-//removed Typography for now
+
 
 import { getPosts } from './actions/posts';
 
