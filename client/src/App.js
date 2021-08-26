@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Container, AppBar, Grow, Grid } from '@material-ui/core';
 import { useDispatch } from 'react-redux';
+import {Helmet} from "react-helmet";
 import { ThemeProvider, createTheme } from '@material-ui/core/styles';
 
 
@@ -38,6 +39,10 @@ const App = () =>{
 
     return(
         <ThemeProvider theme={theme}>
+            <Helmet>
+                <title>Bros.</title>
+                <meta name="description" content="Social Media App using React + Redux, Node, Express, MongoDB" />
+            </Helmet>
             <Container className={classes.body} maxWidth="lg">
             <AppBar className={classes.appBar} position="static" color="inherit">
                 <img className={classes.image} src={Bros} alt="Bros" width="200vw" />
