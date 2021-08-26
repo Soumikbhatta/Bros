@@ -1,6 +1,9 @@
-# Bros: A Social Media App using React + Redux, Node, Express, MongoDB
+# Bros.
+
+A Social Media App using React + Redux, Node, Express, MongoDB
 
 ![](image/README/1630021337365.png)
+
 
 ## Setup
 
