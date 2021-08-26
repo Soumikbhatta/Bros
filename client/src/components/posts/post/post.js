@@ -5,9 +5,13 @@ import DeleteICon from '@material-ui/icons/Delete';
 import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
 import moment from 'moment';
 import useStyles from './styles';
+import { useDispatch } from 'react-redux';
+
+import { deletePost } from '../../../actions/posts';
 
 const Post = ({ post, setCurrentId }) => {
     const classes = useStyles();
+    const dispatch = useDispatch();
     return(
         <Card className={classes.card}>
             <CardMedia className={classes.media} image={post.selectedFile || 'https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg'} title={post.title} />
@@ -33,7 +37,7 @@ const Post = ({ post, setCurrentId }) => {
                     Like
                     {post.likeCount}
                 </Button>
-                <Button size="small" color="primary" onCLick={() =>{}}>
+                <Button size="small" color="primary" onCLick={() =>{dispatch(deletePost(post._id))}}>
                     <DeleteICon fontSize="small" />
                     Delete
                 </Button>
