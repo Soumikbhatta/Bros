@@ -15,7 +15,12 @@ app.use(cors());
 
 //https://www.mongodb.com/cloud/atlas
 app.use('/posts', postRoutes);
-// const CONNECTION_URL ='mongodb+srv://soumik:soumik1712@cluster0.9ghrf.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
+
+app.get('/', (req, res) => {
+    res.send('wassup bros api');
+})
+
+
 const PORT = process.env.PORT || 5000;
 
 mongoose.connect(process.env.CONNECTION_URL,{ useNewUrlParser: true, useUnifiedTopology: true})
