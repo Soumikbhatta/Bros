@@ -1,77 +1,48 @@
-import React, { useState, useEffect } from 'react';
-import { Container, AppBar, Grow, Grid } from '@material-ui/core';
-import { useDispatch } from 'react-redux';
-import {Helmet} from "react-helmet";
+import { Container } from '@material-ui/core';
+import { Helmet } from 'react-helmet';
 import { ThemeProvider, createTheme } from '@material-ui/core/styles';
-
-
-import { getPosts } from './actions/posts';
-
-import Bros from './images/bros.png';
-
-import Posts from './components/posts/posts';
-import Form from './components/form/form';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import useStyles from './styles';
 import { grey } from '@material-ui/core/colors';
+import Navbar from './components/Navbar/Navbar';
+import Home from './components/Home/Home';
+import Auth from './components/Auth/Auth';
 
-const App = () =>{
-    const [currentId, setCurrentId] = useState(null);
-    const classes = useStyles();
-    const dispatch = useDispatch();
-
-    useEffect(()=>{
-        dispatch(getPosts());
-    },[currentId, dispatch]);
-
-    const theme = createTheme({
-        palette: {
-            type: 'dark',
-            primary: {
-                main: 'rgb(255, 255, 255)'
-            },
-            secondary: grey,
-            background: {
-                paper: 'rgb(26, 26, 26)'
-            }
-        }
-    })
-
-    return(
-        <ThemeProvider theme={theme}>
-            <Helmet>
-                <title>Bros.</title>
-                <meta name="description" content="Social Media App using React + Redux, Node, Express, MongoDB" />
-            </Helmet>
-            <Container className={classes.body} maxWidth="lg">
-            <AppBar className={classes.appBar} position="static" color="inherit">
-                <img className={classes.image} src={Bros} alt="Bros" width="200vw" />
-                {/* <Typography variant="h2" align="center">A Social media web app</Typography> */}
-            </AppBar>
-            <Grow in>
-                    <Container>
-                        <Grid container justifyContent="space-between" alignItems="stretch" spacing={3}>
-                            <Grid item xs={12} sm={4}>
-
-                                <Form currentId={currentId} setCurrentId={setCurrentId} />
-                            
-                            </Grid>  
-
-                            <Grid item xs={12} sm={7}>
-
-                                <Posts setCurrentId={setCurrentId} />
-                            
-                            </Grid>  
-                        </Grid>
-                    </Container>
-
-                </Grow>
-
+const App = () => {
+  const classes = useStyles();
+  const theme = createTheme({
+    palette: {
+      type: 'dark',
+      primary: {
+        main: 'rgb(255, 255, 255)',
+      },
+      secondary: grey,
+      background: {
+        paper: 'rgb(26, 26, 26)',
+      },
+    },
+  });
+  return (
+    <BrowserRouter>
+      <ThemeProvider theme={theme}>
+        <Helmet>
+          <title>Bros.</title>
+          <meta
+            name='description'
+            content='Social Media App using React + Redux, Node, Express, MongoDB'
+          />
+        </Helmet>
+        <Container className={classes.body} maxWidth='lg'>
+          <Navbar />
+          <Switch>
+            <Route path='/' exact component={Home} />
+            <Route path='/auth' exact component={Auth} />
+          </Switch>
         </Container>
-
-        </ThemeProvider>
-    
-    )
-}
+      </ThemeProvider>
+    </BrowserRouter>
+  );
+};
 
 export default App;
