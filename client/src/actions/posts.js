@@ -1,5 +1,5 @@
 import * as api from '../api';
-import { FETCH_ALL, CREATE, UPDATE, DELETE, LIKE } from '../consts/actionTypes';
+import { FETCH_ALL, CREATE, UPDATE, DELETE, LIKE } from '../constants/actionTypes';
 
 // Action Creator: functions that return actions
 
