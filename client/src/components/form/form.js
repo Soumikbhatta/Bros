@@ -21,6 +21,7 @@ const Form = ({ currentId, setCurrentId}) => {
     const post = useSelector((state) => currentId ? state.posts.find((p) => p._id === currentId) : null);
 
     const classes = useStyles();
+    const user = JSON.parse(localStorage.getItem('profile'));
     const dispatch = useDispatch();
 
     useEffect(() => {
@@ -28,20 +29,30 @@ const Form = ({ currentId, setCurrentId}) => {
     }, [post])
 
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-
-        if(currentId){
-            dispatch(updatePost(currentId, postData));
+    
+        if (currentId === 0) {
+          dispatch(createPost({ ...postData, name: user?.result?.name }));
+          clear();
         } else {
-            dispatch(createPost(postData));
+          dispatch(updatePost(currentId, { ...postData, name: user?.result?.name }));
+          clear();
         }
-
-        clear();
-    }
+      };
+    
+      if (!user?.result?.name) {
+        return (
+          <Paper className={classes.paper}>
+            <Typography variant="h6" align="center">
+              Please Sign In to create your own memories and like other's memories.
+            </Typography>
+          </Paper>
+        );
+      }
 
     const clear = () =>{
-        setCurrentId(null);
+        setCurrentId(0);
         setPostData({
             creator: '',
             title: '',
@@ -52,6 +63,7 @@ const Form = ({ currentId, setCurrentId}) => {
          
 
     }
+    
     return (
         <Paper className={classes.paper}>
             <form autoComplete="off" noValidate className={`${classes.root} ${classes.form}`} onSubmit={handleSubmit}>

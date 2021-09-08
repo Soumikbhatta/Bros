@@ -18,7 +18,7 @@ export default makeStyles((theme) => ({
   image: {
     marginRight: '0px',
   },
-  [theme.breakpoints.down('sm')]:{
+  [theme.breakpoints.down('xs')]:{
     image: {
       height: 'calc(50vw * 0.54 - 2%)',
       width: '40vw',
