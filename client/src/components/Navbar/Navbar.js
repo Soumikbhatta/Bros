@@ -39,7 +39,7 @@ const Navbar = () => {
     <AppBar className={classes.appBar} position='static' color='inherit'>
       <div className={classes.brandContainer}>
         <Link to='/'>
-          <img className={classes.image} src={bros} alt='icon' height='60' />
+          <img className={classes.image} src={bros} alt='icon' height='50' />
         </Link>
       </div>
       <Toolbar className={classes.toolbar}>

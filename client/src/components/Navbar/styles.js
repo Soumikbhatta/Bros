@@ -9,15 +9,22 @@ export default makeStyles((theme) => ({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    padding: '10px 50px',
+    padding: '10px 20px',
   },
   heading: {
     color: 'rgba(0,183,255, 1)',
     textDecoration: 'none',
   },
   image: {
-    marginLeft: '15px',
+    marginRight: '0px',
   },
+  [theme.breakpoints.down('sm')]:{
+    image: {
+      height: 'calc(50vw * 0.54 - 2%)',
+      width: '40vw',
+    }
+  },
+
   toolbar: {
     display: 'flex',
     justifyContent: 'flex-end',
