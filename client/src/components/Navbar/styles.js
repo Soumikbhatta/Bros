@@ -1,6 +1,5 @@
 import { makeStyles } from '@material-ui/core/styles';
 import { deepPurple } from '@material-ui/core/colors';
-
 export default makeStyles((theme) => ({
   appBar: {
     borderRadius: 15,
@@ -21,19 +20,19 @@ export default makeStyles((theme) => ({
   [theme.breakpoints.down('xs')]:{
     image: {
       height: 'calc(50vw * 0.54 - 2%)',
-      width: '40vw',
+      width: '32vw',
     }
   },
 
   toolbar: {
     display: 'flex',
-    justifyContent: 'flex-end',
-    width: '400px',
+    justifyContent: 'flex-start',
   },
   profile: {
     display: 'flex',
-    justifyContent: 'space-between',
-    width: '400px',
+    justifyContent: 'flex-start',
+    width: '150px',
+    gap: '15px',
   },
   userName: {
     display: 'flex',
