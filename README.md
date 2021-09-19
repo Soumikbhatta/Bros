@@ -4,6 +4,8 @@ A Social Media App using React + Redux, Node, Express, MongoDB
 
 ![](image/README/1632011301176.png)
 
+Google OAuth and JWT Authentication
+
 ![](image/README/1632012117514.png)
 
 ## Setup
