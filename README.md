@@ -2,8 +2,7 @@
 
 A Social Media App using React + Redux, Node, Express, MongoDB
 
-![](image/README/1630021337365.png)
-
+![](image/README/1632011301176.png)
 
 ## Setup
 
