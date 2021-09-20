@@ -19,7 +19,7 @@ app.use('/posts', postRoutes);
 app.use("/user", userRouter);
 
 app.get('/', (req, res) => {
-    res.send('wassup bros api');
+    res.send('wassup! bros api here!');
 })
 
 
