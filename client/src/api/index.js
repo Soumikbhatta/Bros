@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 //adding heroku link
-const API = axios.create({ baseURL: 'https://bros-project.herokuapp.com' });
+const API = axios.create({ baseURL: 'http://localhost:5000' });
 
 API.interceptors.request.use((req) => {
   if (localStorage.getItem('profile')) {
