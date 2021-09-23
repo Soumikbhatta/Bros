@@ -27,7 +27,8 @@
 
 ![](image/README/1632011301176.png)
 
-Google OAuth and JWT Authentication
+
+### Google OAuth and JWT Authentication
 
 ![](image/README/1632012117514.png)
 
