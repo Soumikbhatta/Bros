@@ -8,7 +8,7 @@
 
 ### Tech Stack 📚
 
-- A Social Media App using React + Redux, Node, Express, MongoDBA complete MERN stack project.
+- A Social Media App using React + Redux, Node, Express, MongoDB, a complete MERN stack project.
 
 <p align="center">
      <img atl="MongoDB" src="https://img.shields.io/badge/-Mongodb-green?logo=mongodb&style=for-the-badge&logoColor=white">
