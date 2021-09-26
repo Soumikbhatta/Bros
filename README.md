@@ -17,7 +17,6 @@ A Social Media App using React + Redux, Node, Express, MongoDB, a complete MERN 
 <img atl="Redux" src="https://img.shields.io/badge/redux-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white">
      <br />
      <img alt="material-ui" src="https://img.shields.io/badge/Material--UI-0081CB?style=for-the-badge&logo=material-ui&logoColor=white">
-     <img alt="React-Bootstrap" src="https://img.shields.io/badge/-react--bootstrap-563D7C?style=for-the-badge">
      <img alt="JavaScript" src="https://img.shields.io/badge/-javascript-yellow?logo=javascript&logoColor=white&style=for-the-badge">
      <img alt="css" src="https://img.shields.io/badge/-css3-blue?logo=css3&style=for-the-badge">
      <img alt="html" src="https://img.shields.io/badge/-html5-red?logo=html5&logoColor=white&style=for-the-badge">
