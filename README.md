@@ -5,7 +5,6 @@
     <br>
  </p>
 
-
 A Social Media App using React + Redux, Node, Express, MongoDBA complete MERN stack project.
 
 ### Tech Stack 📚
