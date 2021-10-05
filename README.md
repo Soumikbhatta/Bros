@@ -5,11 +5,8 @@
     <br>
  </p>
 
-<<<<<<< HEAD
+
 A Social Media App using React + Redux, Node, Express, MongoDBA complete MERN stack project.
-=======
-A Social Media App using React + Redux, Node, Express, MongoDB, a complete MERN stack project.
->>>>>>> ce660b894dc20f070a5a7976dcd63a7507760c0f
 
 ### Tech Stack 📚
 
