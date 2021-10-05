@@ -4,8 +4,9 @@
     <img src="image/README/1632354652307.png" width="350" />
     <br>
  </p>
-
+<p align="center">
 A Social Media App using React + Redux, Node, Express, MongoDBA complete MERN stack project.
+</p>
 
 ### Tech Stack 📚
 
