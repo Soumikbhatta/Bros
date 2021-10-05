@@ -5,10 +5,9 @@
     <br>
  </p>
 
+A Social Media App using React + Redux, Node, Express, MongoDBA complete MERN stack project.
 
 ### Tech Stack 📚
-
-- A Social Media App using React + Redux, Node, Express, MongoDBA complete MERN stack project.
 
 <p align="center">
      <img atl="MongoDB" src="https://img.shields.io/badge/-Mongodb-green?logo=mongodb&style=for-the-badge&logoColor=white">
@@ -24,9 +23,7 @@
      <img alt="html" src="https://img.shields.io/badge/-html5-red?logo=html5&logoColor=white&style=for-the-badge">
 </p>
 
-
 ![](image/README/1632011301176.png)
-
 
 ### Google OAuth and JWT Authentication
 
